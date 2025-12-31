@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ui.MainController">
+    <top>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" left="10" right="10" bottom="10" />
+            </padding>
+            <Label text="Campus Route Finder" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+            <HBox spacing="10">
+                <Label text="Start:" />
+                <ComboBox fx:id="startBox" prefWidth="150"/>
+                <Label text="Goal:" />
+                <ComboBox fx:id="goalBox" prefWidth="150"/>
+                <Label text="Facing:" />
+                <ComboBox fx:id="facingBox" prefWidth="100"/>
+                <Button text="Find Route" onAction="#findRoute"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <TextArea fx:id="outputArea" wrapText="true" editable="false" prefHeight="300"/>
+    </center>
+</BorderPane>
